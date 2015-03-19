@@ -1,3 +1,3 @@
 #!/bin/bash
 
-exec /sbin/setuser plex /usr/sbin/start_pms
+exec /sbin/setuser htpc /usr/sbin/start_pms
