@@ -1,5 +1,5 @@
 FROM phusion/baseimage:0.9.16
-MAINTAINER David Young <davidy@funkypenguin.co.nz>
+MAINTAINER Karl Tiedt <ktiedt@gmail.com>
 #Based on the work of needo <needo@superhero.org>
 #Based on the work of Eric Schultz <eric@startuperic.com>
 #Thanks to Tim Haak <tim@haak.co.uk>
@@ -19,13 +19,13 @@ RUN apt-get -q update
 RUN apt-get install -qy gdebi-core wget
 
 # Add a generic htpc user, which we'll reuse for all HTPC containers, and set UID predictable value (the meaning of 2 lives)
-RUN useradd htpc -u 4242
+RUN useradd ktiedt -u 1000
 
 ADD installplex.sh /
 RUN bash /installplex.sh
 
 VOLUME /config
-VOLUME /data
+VOLUME /home/ktiedt/Plex
 
 ## Expose ports
 # DLNA

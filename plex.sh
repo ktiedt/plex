@@ -1,3 +1,3 @@
 #!/bin/bash
 
-exec /sbin/setuser htpc /usr/sbin/start_pms
+exec /sbin/setuser ktiedt /usr/sbin/start_pms
